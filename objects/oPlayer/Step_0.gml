@@ -3,18 +3,18 @@ my_ySpeed+=0.1;
 my_xSpeed = 0;
 // Variables for player movement 
 
-
+ 
 // Check for Left movement input
 if (keyboard_check(vk_left) or keyboard_check(ord("A")))
 {
-	my_xSpeed=-1;	
+	my_xSpeed=-2;	
 	image_xscale = -1;
 }
 
 // Check for Right movement input
 if (keyboard_check(vk_right) or keyboard_check(ord("D")))
 {
-	my_xSpeed=+1;	
+	my_xSpeed=+2;	
 	image_xscale = +1;
 
 }
