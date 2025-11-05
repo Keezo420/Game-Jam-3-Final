@@ -38,3 +38,8 @@ if (keyboard_check(vk_shift))
 
 move_and_collide(my_xSpeed, my_ySpeed, oWall);
 
+if player_health <= 0
+{
+	room_restart();	
+}
+
