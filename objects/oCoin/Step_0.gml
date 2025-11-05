@@ -1,5 +1,5 @@
- // Checks if Player collects coin
-   // Checks if Player collects coin
+ // Checks if Player collides with coin, 
+ // this will be collected by the player and the coin instance will be destroyed.
 if place_meeting(x,y+1, oPlayer)
 {
 	oPlayer.collectibles_collected+= 1;	
