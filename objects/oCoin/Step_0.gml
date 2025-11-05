@@ -1,4 +1,5 @@
  // Checks if Player collects coin
+   // Checks if Player collects coin
 if place_meeting(x,y+1, oPlayer)
 {
 	oPlayer.collectibles_collected+= 1;	
