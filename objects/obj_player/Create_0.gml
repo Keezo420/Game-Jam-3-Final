@@ -21,8 +21,11 @@ is_dodging = false;		// Tracks Player uses dodging input
 // --- Timer ---
 state_timer = 0;		// State Timer
 
-// --- Player Health  ---
+// --- Player Health Manager  ---
 player_health=100;		// Health of the Player
+damage_flash_time = 0;
+damage_flash_duration = 10;
+invincible_timer = 0;
 
 // --- Collectables Manager ---
 collectibles_collected = 0;	

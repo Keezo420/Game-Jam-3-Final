@@ -3,9 +3,9 @@
 if (!show_debug) exit;
 
 // Only draw if the player exists
-if (!instance_exists(oPlayer)) exit;
+if (!instance_exists(obj_player)) exit;
 
-var p = instance_find(oPlayer, 0);
+var p = instance_find(obj_player, 0);
 if (p != noone) {
     var list = variable_struct_get_names(p);
     var ty = 16;

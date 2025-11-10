@@ -113,3 +113,17 @@ if (is_attacking) {
 }
 
 #endregion
+
+#region Player Damage Event
+
+if (invincible_timer > 0) invincible_timer -= 1;
+if (damage_flash_time > 0) damage_flash_time -= 1;
+if (damage_flash_time > 0) {
+    image_blend = merge_color(c_red, c_white, 1 - (damage_flash_time / damage_flash_duration));
+} else {
+    image_blend = c_white;
+}
+
+if player_health <= 0 room_restart();
+
+#endregion

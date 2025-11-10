@@ -34,6 +34,7 @@
     {"name":"oCoin_20","order":1,"path":"objects/oCoin_20/oCoin_20.yy",},
     {"name":"oEndFlag","order":3,"path":"objects/oEndFlag/oEndFlag.yy",},
     {"name":"Room1_1","order":1,"path":"rooms/Room1_1/Room1_1.yy",},
+    {"name":"scr_damage_player","order":1,"path":"scripts/scr_damage_player/scr_damage_player.yy",},
     {"name":"sEndFlag","order":1,"path":"sprites/sEndFlag/sEndFlag.yy",},
     {"name":"sSpikes","order":3,"path":"sprites/sSpikes/sSpikes.yy",},
     {"name":"sWall","order":1,"path":"sprites/sWall/sWall.yy",},
