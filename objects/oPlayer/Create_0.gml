@@ -1,15 +1,29 @@
 window_set_size(1280,720);
-image_xscale=1;
 
-// Sets variables for player's speed on X and Y axis.
-my_xSpeed= 0;		
-my_ySpeed= 0;
-moveX=0;
-moveY=0;
+// --- Movement Variables ---
+hsp = 0;				// Horizontal Speed
+vsp = 0;				// Vertical Speed
+move_speed = 6;			// Movement Speed
+jump_speed = 12;		// Jump Speed
+grav_force = 1;			// Gravity Force
+max_fall_speed = 12;	// Maximum Vertical Speed
 
-// Tracks the health of the player, instantiated with a default value of 100.
-player_health=100;
+// --- State control ---
+state = "idle";			// Current Player State 
+prev_state = "idle";	// Previous Player State
+facing = 1;				// Direction player is facing
+grounded = false;		// Player is on ground checks
 
-// Tracks the number of items collected by the player.
-collectibles_collected = 0;
+// --- Action Flags ---
+is_attacking = false;	// Tracks Player uses attacking input
+is_dodging = false;		// Tracks Player uses dodging input
+
+// --- Timer ---
+state_timer = 0;		// State Timer
+
+// --- Player Health  ---
+player_health=100;		// Health of the Player
+
+// --- Collectables Manager ---
+collectibles_collected = 0;	
 coins_value = 0;

@@ -1,6 +1,7 @@
+// --- COLLISION CHECKS ---
 if place_meeting(x, y + 1, oSpikes)
 {
-	my_ySpeed= -6; //whatever is fall speed
+	vsp=-12; // bounces player up to give time to move out the way
 	player_health -=25;
 }
  //bounce speed

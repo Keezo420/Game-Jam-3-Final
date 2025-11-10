@@ -1,45 +1,115 @@
-
-my_ySpeed+=0.1;
-my_xSpeed = 0;
-// Variables for player movement 
-
- 
-// Check for Left movement input
-if (keyboard_check(vk_left) or keyboard_check(ord("A")))
+#region Player Movement (L/R)
+/// --- INPUT ---
+var move_input = 0;
+if (keyboard_check(ord("D"))) 
+{ 
+	move_input = 1;
+	image_xscale = 1;
+}
+if (keyboard_check(ord("A"))) 
 {
-	my_xSpeed=-2;	
+	move_input = -1;
 	image_xscale = -1;
 }
 
-// Check for Right movement input
-if (keyboard_check(vk_right) or keyboard_check(ord("D")))
-{
-	my_xSpeed=+2;	
-	image_xscale = +1;
+// Handles direction sprite should face
+if (move_input != 0) facing = move_input;
 
+#endregion
+
+#region Collision & Movement
+
+/// --- CHECK GROUND ---
+// Check one pixel below player for ground
+if (place_meeting(x, y + 1, obj_ground)) {
+    grounded = true;
+} else {
+    grounded = false;
 }
 
-// Check if Player is on the ground.
-if place_meeting(x, y+1, oWall)
-{
-	my_ySpeed = 0;
-	// allow for Jump input checks, since player is grounded.
-	if (keyboard_check(vk_space))
-	{
-		my_ySpeed = -4;
-	}
+/// --- HORIZONTAL MOVEMENT ---
+hsp = move_input * move_speed;
+
+// Horizontal collision step movement (1 pixel increments)
+if (hsp != 0) {
+    var step = sign(hsp);
+    for (var i = 0; i < abs(hsp); i++) {
+        if (!place_meeting(x + step, y, obj_ground)) {
+            x += step;
+        } else {
+            break;
+        }
+    }
 }
 
-// Check for Shift input to increase player speed.
-if (keyboard_check(vk_shift))
-{
-	my_xSpeed += my_xSpeed * 2;
+/// --- JUMPING ---
+if (keyboard_check(vk_space) && grounded) {
+    vsp = -jump_speed;
+    grounded = false;
 }
 
-move_and_collide(my_xSpeed, my_ySpeed, oWall);
-
-if player_health <= 0
-{
-	room_restart();	
+/// --- APPLY GRAVITY ---
+if (!grounded) {
+    vsp += grav_force;
+    if (vsp > max_fall_speed) vsp = max_fall_speed;
+} else {
+    vsp = 0;
 }
 
+/// --- VERTICAL MOVEMENT (stepwise) ---
+var remaining_vsp = vsp;
+while (remaining_vsp != 0) {
+    var step = sign(remaining_vsp) * min(1, abs(remaining_vsp));
+    
+    if (!place_meeting(x, y + step, obj_ground)) {
+        y += step;
+        remaining_vsp -= step;
+        grounded = false;  // mid-air
+    } else {
+        if (step > 0) grounded = true;
+        vsp = 0;
+        break;
+    }
+}
+
+#endregion
+
+#region Player States
+/// --- ATTACKING (example: Mouse Left Click) ---
+if (mouse_check_button_pressed(mb_left)) {
+    is_attacking = true;
+    state_timer = 0;
+}
+
+/// --- DODGING (example:  CTRL key while moving) ---
+if (keyboard_check(vk_control) && move_input != 0) {
+    is_dodging = true;
+    state_timer = 0;
+}
+
+/// --- STATE MACHINE ---
+prev_state = state;
+
+if (is_attacking) {
+    state = "attack";
+    state_timer += 1;
+    if (state_timer > 15) {
+        is_attacking = false;
+        state_timer = 0;
+    }
+} else if (is_dodging) {
+    state = "dodge";
+    state_timer += 1;
+    if (state_timer > 20) {
+        is_dodging = false;
+        state_timer = 0;
+    }
+} else if (!grounded) {
+    state = "jump";
+} else if (move_input != 0) {
+    state = "run";
+} else {
+    state = "idle";
+}
+
+#endregion
