@@ -1,0 +1,1 @@
+step_top_y = y - sprite_height;

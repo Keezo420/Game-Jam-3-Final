@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_doorclose_sound",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_doorclose_sound",
+  "parent":{
+    "name":"House",
+    "path":"folders/Scripts/Environment/House.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
