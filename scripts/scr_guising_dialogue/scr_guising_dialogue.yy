@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_guising_dialogue",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_guising_dialogue",
+  "parent":{
+    "name":"House",
+    "path":"folders/Scripts/Environment/House.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

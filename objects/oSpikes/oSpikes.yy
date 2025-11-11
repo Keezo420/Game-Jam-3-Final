@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Environment",
-    "path":"folders/Objects/Blocks/Environment.yy",
+    "path":"folders/Objects/Environment/Blocks/Environment.yy",
   },
   "parentObjectId":null,
   "persistent":false,
