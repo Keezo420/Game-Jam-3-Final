@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_npc_homeowner",
   "bboxMode":0,
   "bbox_bottom":410,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a74a3ea9-fdb8-4040-afab-bee904350d1f","name":"a74a3ea9-fdb8-4040-afab-bee904350d1f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a74a3ea9-fdb8-4040-afab-bee904350d1f","name":"a74a3ea9-fdb8-4040-afab-bee904350d1f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"userInterface",
+    "path":"folders/Sprites/userInterface.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

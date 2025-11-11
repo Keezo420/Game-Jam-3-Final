@@ -11,8 +11,13 @@
   "name":"obj_btn_parent",
   "overriddenProperties":[],
   "parent":{
+<<<<<<< Updated upstream
     "name":"Buttons",
     "path":"folders/Objects/Buttons.yy",
+=======
+    "name":"userInterface",
+    "path":"folders/Objects/userInterface.yy",
+>>>>>>> Stashed changes
   },
   "parentObjectId":null,
   "persistent":false,

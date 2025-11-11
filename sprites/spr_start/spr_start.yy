@@ -46,8 +46,13 @@
   },
   "origin":4,
   "parent":{
+<<<<<<< Updated upstream
     "name":"Sprites",
     "path":"folders/Sprites.yy",
+=======
+    "name":"userInterface",
+    "path":"folders/Sprites/userInterface.yy",
+>>>>>>> Stashed changes
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

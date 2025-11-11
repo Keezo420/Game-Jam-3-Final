@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_doorbell1",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":0,
-  "bitRate":32,
+  "channelFormat":0,
   "compression":1,
+  "compressionQuality":0,
   "conversionMode":0,
   "duration":2.9808617,
+  "exportDir":"",
   "name":"snd_doorbell1",
   "parent":{
     "name":"Environment",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":32000,
   "soundFile":"snd_doorbell1.mp3",
-  "type":0,
   "volume":1.0,
 }

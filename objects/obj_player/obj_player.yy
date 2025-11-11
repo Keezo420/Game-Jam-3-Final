@@ -10,8 +10,8 @@
   "name":"obj_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"userInterface",
+    "path":"folders/Objects/userInterface.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -14,8 +14,13 @@
   "exportDir":"",
   "name":"snd_button",
   "parent":{
+<<<<<<< Updated upstream
     "name":"Sounds",
     "path":"folders/Sounds.yy",
+=======
+    "name":"userInterface",
+    "path":"folders/Sounds/userInterface.yy",
+>>>>>>> Stashed changes
   },
   "preload":false,
   "resourceType":"GMSound",

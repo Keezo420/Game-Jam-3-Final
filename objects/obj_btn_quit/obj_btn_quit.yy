@@ -10,8 +10,13 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_btn_parent","path":"objects/obj_btn_parent/obj_btn_parent.yy",},"propertyId":{"name":"btn_text","path":"objects/obj_btn_parent/obj_btn_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"",},
   ],
   "parent":{
+<<<<<<< Updated upstream
     "name":"Buttons",
     "path":"folders/Objects/Buttons.yy",
+=======
+    "name":"userInterface",
+    "path":"folders/Objects/userInterface.yy",
+>>>>>>> Stashed changes
   },
   "parentObjectId":{
     "name":"obj_btn_parent",
