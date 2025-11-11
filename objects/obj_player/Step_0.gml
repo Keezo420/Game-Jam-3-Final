@@ -1,4 +1,8 @@
+#region DEBUGGING INFO DELETE WHEN DONE
+#endregion
+
 #region Player Movement (L/R)
+
 /// --- INPUT ---
 var move_input = 0;
 if (keyboard_check(ord("D"))) 
@@ -19,33 +23,39 @@ if (move_input != 0) facing = move_input;
 
 #region Collision & Movement
 
-/// --- CHECK GROUND ---
-// Check one pixel below player for ground
-if (place_meeting(x, y + 1, obj_ground)) {
-    grounded = true;
-} else {
-    grounded = false;
-}
+// Block Normal Movement if player is standing outside a door
+if !(at_top_of_steps)
+{
+	/// --- CHECK GROUND ---
+	// Check one pixel below player for ground
+	if (place_meeting(x, y + 1, obj_ground)) {
+	    grounded = true;
+	} else {
+	    grounded = false;
+	}
 
-/// --- HORIZONTAL MOVEMENT ---
-hsp = move_input * move_speed;
+	/// --- HORIZONTAL MOVEMENT ---
+	hsp = move_input * move_speed;
 
-// Horizontal collision step movement (1 pixel increments)
-if (hsp != 0) {
-    var step = sign(hsp);
-    for (var i = 0; i < abs(hsp); i++) {
-        if (!place_meeting(x + step, y, obj_ground)) {
-            x += step;
-        } else {
-            break;
-        }
-    }
-}
+	// Horizontal collision step movement (1 pixel increments)
+	if (hsp != 0) {
+	    var step = sign(hsp);
+	    for (var i = 0; i < abs(hsp); i++) {
+	        if (!place_meeting(x + step, y, obj_ground)) {
+	            x += step;
+	        } else {
+	            break;
+	        }
+	    }
+	}
 
-/// --- JUMPING ---
-if (keyboard_check(vk_space) && grounded) {
-    vsp = -jump_speed;
-    grounded = false;
+	/// --- JUMPING ---
+	if !(special_surface_type == "steps") {
+		if (keyboard_check(ord("W")) && grounded) {
+			vsp = -jump_speed;
+			grounded = false;
+		}
+	}
 }
 
 /// --- APPLY GRAVITY ---
@@ -114,7 +124,7 @@ if (is_attacking) {
 
 #endregion
 
-#region Player Damage Event
+#region Player Damage Event Handling
 
 if (invincible_timer > 0) invincible_timer -= 1;
 if (damage_flash_time > 0) damage_flash_time -= 1;
@@ -127,3 +137,6 @@ if (damage_flash_time > 0) {
 if player_health <= 0 room_restart();
 
 #endregion
+
+scr_check_environment();
+scr_handle_environment();

@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Blocks",
-    "path":"folders/Objects/Blocks.yy",
+    "path":"folders/Objects/Environment/Blocks.yy",
   },
   "parentObjectId":{
     "name":"obj_ground",

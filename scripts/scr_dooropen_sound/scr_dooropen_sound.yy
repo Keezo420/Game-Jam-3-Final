@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_dooropen_sound",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_dooropen_sound",
+  "parent":{
+    "name":"House",
+    "path":"folders/Scripts/Environment/House.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

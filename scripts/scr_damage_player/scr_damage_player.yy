@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_damage_player",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Environment",
+    "path":"folders/Scripts/Environment.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

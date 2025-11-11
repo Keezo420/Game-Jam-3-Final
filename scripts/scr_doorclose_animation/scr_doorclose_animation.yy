@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_doorclose_animation",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_doorclose_animation",
+  "parent":{
+    "name":"House",
+    "path":"folders/Scripts/Environment/House.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
