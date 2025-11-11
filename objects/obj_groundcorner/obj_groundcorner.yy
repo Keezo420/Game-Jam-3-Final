@@ -1,15 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"oWall",
+  "%Name":"obj_groundcorner",
   "eventList":[],
   "managed":true,
-  "name":"oWall",
+  "name":"obj_groundcorner",
   "overriddenProperties":[],
   "parent":{
     "name":"Blocks",
     "path":"folders/Objects/Blocks.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_ground",
+    "path":"objects/obj_ground/obj_ground.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -28,12 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sWall",
-    "path":"sprites/sWall/sWall.yy",
+    "name":"sWallCorner",
+    "path":"sprites/sWallCorner/sWallCorner.yy",
   },
   "spriteMaskId":null,
-  "tags":[
-    "ground",
-  ],
   "visible":true,
 }

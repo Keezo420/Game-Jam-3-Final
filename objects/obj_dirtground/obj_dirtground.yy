@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"oDirtWall",
+  "%Name":"obj_dirtground",
   "eventList":[],
   "managed":true,
-  "name":"oDirtWall",
+  "name":"obj_dirtground",
   "overriddenProperties":[],
   "parent":{
     "name":"Blocks",
     "path":"folders/Objects/Blocks.yy",
   },
   "parentObjectId":{
-    "name":"oWall",
-    "path":"objects/oWall/oWall.yy",
+    "name":"obj_ground",
+    "path":"objects/obj_ground/obj_ground.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
